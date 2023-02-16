@@ -2,7 +2,6 @@
 
 /**
  * main - our main function
- *
  * Description: prints a long sentence
  * Return: returns 0
  */
