@@ -3,7 +3,6 @@
 /**
  * hi
  * this is documentation for main.c
- * 
  */
 int main(void)
 {
