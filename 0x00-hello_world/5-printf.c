@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-/* I Love */
+/**
+ * hi
+ * this is documentation for main.c
+ * 
+ */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
