@@ -2,7 +2,7 @@
 
 /**
  * main - our main function
- * Description: prints a long sentence
+ * Description: prints a long sentenc
  * Return: returns 0
  */
 int main(void)
