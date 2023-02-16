@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 /**
- * hi
- * this is documentation for main.c
+ * main - our main function
+ *
+ * Description: prints a long sentence
+ * Return: returns 0
  */
 int main(void)
 {
