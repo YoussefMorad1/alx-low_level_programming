@@ -3,7 +3,7 @@
 /**
  * main - our main function
  * Description: prints a long sentenc
- * Return: returns 0
+ * Return: returns
  */
 int main(void)
 {
