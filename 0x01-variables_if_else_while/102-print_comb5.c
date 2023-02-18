@@ -19,7 +19,7 @@ int main(void)
 				if (k == i)
 					l = j + 1;
 				else
-					l = j;
+					l = 0;
 				for (; l <= 9; l++)
 				{
 					putchar('0' + i);
