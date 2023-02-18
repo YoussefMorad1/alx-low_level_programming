@@ -8,14 +8,9 @@
  */
 int main(void)
 {
-	char i = 'a';
+        int i = 0;
 
-	for (; i <= 'z'; i++)
-	{
-		if (i == 'q' || i == 'e')
-			continue;
-		putchar(i);
-	}
-	putchar('\n');
-	return (0);
+        for (; i <= 9; i++)
+                printf("%d\n", i);
+        return (0);
 }
