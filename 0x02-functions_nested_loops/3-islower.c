@@ -4,7 +4,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * print_alphabet_x10 - main func
+ * _islower - main func
  * Description: hi hi hi
  * Return: 0
  */
