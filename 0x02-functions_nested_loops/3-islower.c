@@ -8,16 +8,9 @@
  * Description: hi hi hi
  * Return: 0
  */
-void print_alphabet_x10(void)
+int _islower(int c)
 {
-	char i;
-	int t = 1;
-
-	for (; t <= 10; ++t)
-	{
-		i = 'a';
-		for (; i <= 'z'; ++i)
-			_putchar(i);
-		_putchar('\n');
-	}
+	if (c >= 'a' && c <= 'z')
+		return 1;
+	return 0;
 }
