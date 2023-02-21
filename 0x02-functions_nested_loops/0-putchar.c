@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #include "main.h"
 /**
  * main - main func
@@ -10,8 +11,9 @@
 int main(void)
 {
 	char* s = ("_putchar\n");
-	
-	for (int i = 0; i < strlen(s); i++)
+	int i;
+
+	for (i = 0; i < strlen(s); i++)
 		_putchar(s[i]);
 	return (0);
 }
