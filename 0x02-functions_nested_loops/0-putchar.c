@@ -13,7 +13,7 @@ int main(void)
 	char* s = ("_putchar\n");
 	int i;
 
-	for (i = 0; i < strlen(s); i++)
+	for (i = 0; i < (int)strlen(s); i++)
 		_putchar(s[i]);
 	return (0);
 }
