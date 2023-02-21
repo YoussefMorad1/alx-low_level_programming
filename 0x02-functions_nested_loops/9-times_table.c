@@ -15,6 +15,7 @@ void times_table(void)
 		{
 			if (j < 10)
 			{
+				_putchar(' ');
 				_putchar('0' + j);
 			}
 			else
