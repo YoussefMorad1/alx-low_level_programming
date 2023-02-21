@@ -5,7 +5,7 @@
  * Description: samerr
  * Return: bye bye
  */
-int jack_bauer(void)
+void jack_bauer(void)
 {
 	int i, j;
 
@@ -18,7 +18,7 @@ int jack_bauer(void)
 			_putchar(':');	
 			_putchar('0' + j / 10);
 			_putchar('0' + j % 10);
-			_putchar('\n')'
+			_putchar('\n');
 		}
 	}
 }
