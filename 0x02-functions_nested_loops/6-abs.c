@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "main.h"
+/**
+* abs - hi hi
+* Description: samerr
+* @n: hi hi
+* Return: bye bye
+*/
+int abs(int n)
+{
+	if (n > 0)
+	{
+		return (n);
+	}
+	else
+	{
+		return (-n);
+	}
+}
