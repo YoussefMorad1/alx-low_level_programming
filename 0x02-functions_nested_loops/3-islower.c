@@ -6,7 +6,7 @@
 /**
  * _islower - main func
  * Description: hi hi hi
- * @parameter: int c
+ * @parameterx: int c
  * Return: 0
  */
 int _islower(int c)
