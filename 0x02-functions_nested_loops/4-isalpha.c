@@ -6,7 +6,7 @@
 /**
  * _isalpha - main func
  * Description: hi hi hi
- * @parametarx: int c 
+ * @c: int c
  * Return: 0
  */
 int _isalpha(int c)
