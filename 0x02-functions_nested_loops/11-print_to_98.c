@@ -12,7 +12,7 @@ void print_to_98(int n)
 {
 	if (n <= 98)
 	{
-		for(; n < 98; ++n)
+		for (; n < 98; ++n)
 		{
 			int x = n, l = log10(n);
 
@@ -27,10 +27,9 @@ void print_to_98(int n)
 	}
 	else
 	{
-		for(; n > 98; --n)
+		for (; n > 98; --n)
 		{
-			int x = n, l = log10(n);
-			
+			int x = n, l = log10(n);	
 			while (l)
 			{
 				_putchar('0' + (x / l) % 10);
