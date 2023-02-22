@@ -9,7 +9,12 @@
  * Return: bye bye
  */
 int print_last_digit(int n)
-{
-	_putchar('0' + abs((long long)n) % 10);
-	return (abs((long long)n) % 10);
+{	
+	if (n == INT_MIN)
+	{
+		_putchar((abs(INT_MIN + 1) % 10 + 1) % 10 + '0')
+		return ((abs(INT_MIN + 1) % 10 + 1) % 10);
+	}
+	_putchar('0' + abs(n) % 10);
+	return (abs(n) % 10);
 }
