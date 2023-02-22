@@ -2,6 +2,24 @@
 #include <stdlib.h>
 #include "main.h"
 /**
+ * ln - hi hi
+ * Description: samerr
+ * @x: sh
+ * Return: bye bye
+ */
+int ln(int x)
+{
+	if (!x)
+		return (1);
+	int i = 1, j, ct = 0;
+
+	for (j = 1; j <= i; j *= 10)
+	{
+		ct++;
+	}
+	return (ct);
+}
+/**
  * print_to_98 - hi hi
  * Description: samerr
  * @n: sh
@@ -9,22 +27,12 @@
  */
 void print_to_98(int n)
 {
-	int l = 0, x = abs(n);
-	if (!x)
-	{
-		l = 1;
-	}
-	else
-	{
-		int i = 1, j, ct = 0;
-		for (j = 1; j <= i; j *= 10)
-			ct++;
-		l = ct;
-	}
 	if (n <= 98)
 	{
 		for (; n < 98; ++n)
-		{			
+		{
+			int x = abs(n), l = ln(abs(n));
+
 			if (n < 0)
 				_putchar('-');
 			while (l)
@@ -40,6 +48,8 @@ void print_to_98(int n)
 	{
 		for (; n > 98; --n)
 		{
+			int x = n, l = ln(n);
+
 			while (l)
 			{
 				_putchar('0' + (x / l) % 10);
