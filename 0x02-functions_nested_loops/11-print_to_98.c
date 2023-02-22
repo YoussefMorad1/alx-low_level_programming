@@ -9,12 +9,12 @@
  */
 int ln(int x)
 {
-	if (!x)
-		return (1);
 	int i = 1;
 	int	j;
 	int ct = 0;
-
+	
+	if (!x)
+		return (1);
 	for (j = 1; j <= i; j *= 10)
 	{
 		ct++;
