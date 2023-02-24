@@ -5,7 +5,7 @@
  * @n: s
  * Return: 0
  */
-void print_sqaure(int n)
+void print_square(int n)
 {
 	int i = 0;
 
