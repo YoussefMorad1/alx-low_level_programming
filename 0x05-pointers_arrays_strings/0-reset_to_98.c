@@ -2,7 +2,7 @@
 /**
  * reset_to_98 - zz
  * Description: hi bye
- * @c: int c
+ * @n: int c
  * Return: 0
  */
 void reset_to_98(int *n)
