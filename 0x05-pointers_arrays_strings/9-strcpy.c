@@ -1,10 +1,11 @@
 #include "main.h"
 /**
  * _strcpy - hi
+ * Description
  * @s : hi
  * @ss : hi
- * Return : hi
-*/
+ * Return: pointer
+ */
 char *_strcpy(char *s, char *ss)
 {
 	int i = 0, j = 0;
@@ -16,7 +17,7 @@ char *_strcpy(char *s, char *ss)
 		{
 			s[i] = s[j];
 			break;
-		}	
+		}
 	}
 	return (s);
 }
