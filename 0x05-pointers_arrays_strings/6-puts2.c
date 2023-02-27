@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _puts2 - hi
+ * puts2 - hi
  * @str : hi
  * Return : hi
 */
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int i = 0;
 
