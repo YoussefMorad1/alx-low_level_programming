@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strcpy - hi
  * Description
@@ -13,7 +14,7 @@ char *_strcpy(char *s, char *ss)
 	while (1)
 	{
 		s[i++] = ss[j++];
-		if (s[j] == '\0')
+		if (ss[j] == '\0')
 		{
 			s[i] = s[j];
 			break;
