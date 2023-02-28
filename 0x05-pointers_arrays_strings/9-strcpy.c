@@ -13,12 +13,12 @@ char *_strcpy(char *s, char *ss)
 
 	while (1)
 	{
-		s[i++] = ss[j++];
 		if (ss[j] == '\0')
 		{
-			s[i] = s[j];
+			s[i] = ss[j];
 			break;
 		}
+		s[i++] = ss[j++];
 	}
 	return (s);
 }
