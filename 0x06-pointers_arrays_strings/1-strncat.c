@@ -3,9 +3,10 @@
  * _strncat - hi
  * @s : hi
  * @ss : yo
+ * @n : hh
  * Return: hi
 */
-char *_strcat(char *s, char *ss, int n)
+char *_strncat(char *s, char *ss, int n)
 {
 	int i = 0, j;
 
