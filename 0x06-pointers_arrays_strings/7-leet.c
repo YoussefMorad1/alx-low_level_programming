@@ -6,20 +6,24 @@
 */
 char *leet(char *s)
 {
-	int i = 0;
+	char i = 'A';
+	char arr[200];
+	int j = 0;
 
-	for (i = 0; s[i] != '\0'; ++i)
+	for (; i <= 'Z'; i++)
+		arr[i] = i;
+	for (i = 'a'; i <= 'z'; i++)
+		arr[i] = i;
+
+	arr['a'] = arr['A'] = '4';
+	arr['E'] = arr['e'] = '3';
+	arr['T'] = arr['t'] = '7';
+	arr['O'] = arr['o'] = '0';
+	arr['L'] = arr['l'] = '1';
+
+	for (; s[j] != '\0'; j++)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		if (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		if (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		if (s[i] == 'T' || s[i] == 't')
-			s[i] = '7';
-		if (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
-	}	
+		s[j] = arr[s[j]];
+	}
 	return (s);
 }
