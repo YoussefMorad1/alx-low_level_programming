@@ -8,11 +8,11 @@
 */
 char *_strncpy(char *s, char *ss, int n)
 {
-	int i = 0, j;
+	int i = 0;
 
 	for (i = 0; i < n && ss[i] != '\0'; ++j)
-		s[j] = ss[i];
-	if (i != n)
-		s[j] = '\0';
+		s[i] = ss[i];
+	for (; i < n; ++i)
+		s[i] = '\0';
 	return (s);
 }
