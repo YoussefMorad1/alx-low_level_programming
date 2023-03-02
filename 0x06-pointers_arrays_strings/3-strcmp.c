@@ -12,11 +12,5 @@ int _strcmp(char *s, char *ss)
 	for (i = 0; s[i] != '\0' && ss[i] != '\0'; ++i)
 		if (s[i] != ss[i])
 			return (s[i] - ss[i]);
-	if (s[i] == '\0' && ss[i] == '\0')
-		return (0);
-	else if (s[i] == '\0')
-		return (s[i] - ss[i]);
-	else
-		return (s[i] - ss[i]);
-	return (0);
+	return (s[i] - ss[i]);
 }
