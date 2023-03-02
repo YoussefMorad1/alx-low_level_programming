@@ -27,4 +27,4 @@ char *leet(char *s)
 			s[j] = arr[s[j]];
 	}
 	return (s);
-i}
+}
