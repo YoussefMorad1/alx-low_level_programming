@@ -5,7 +5,7 @@
  * @ss : yo
  * Return: hi
 */
-char *_strcmp(char *s, char *ss)
+int _strcmp(char *s, char *ss)
 {
 	int i = 0;
 
