@@ -23,7 +23,8 @@ char *leet(char *s)
 
 	for (; s[j] != '\0'; j++)
 	{
-		s[j] = arr[s[j]];
+		if ((s[j] >= 'a' && s[j] <= 'z') || (s[j] >= 'A' && s[j] <= 'Z'))
+			s[j] = arr[s[j]];
 	}
 	return (s);
-}
+i}
