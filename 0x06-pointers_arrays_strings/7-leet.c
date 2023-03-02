@@ -11,18 +11,18 @@ char *leet(char *s)
 	int j = 0;
 
 	for (; i <= 'z'; i++)
-		arr[i] = i;
+		arr[(int)i] = i;
 
-	arr['a'] = arr['A'] = '4';
-	arr['E'] = arr['e'] = '3';
-	arr['T'] = arr['t'] = '7';
-	arr['O'] = arr['o'] = '0';
-	arr['L'] = arr['l'] = '1';
+	arr[(int)'a'] = arr[(int)'A'] = '4';
+	arr[(int)'E'] = arr[(int)'e'] = '3';
+	arr[(int)'T'] = arr[(int)'t'] = '7';
+	arr[(int)'O'] = arr[(int)'o'] = '0';
+	arr[(int)'L'] = arr[(int)'l'] = '1';
 
 	for (; s[j] != '\0'; j++)
 	{
-		if ((s[j] >= 'a' && s[j] <= 'z') || (s[j] >= 'A' && s[j] <= 'Z'));
-			s[j] = arr[s[j]];
+		if ((s[j] >= 'a' && s[j] <= 'z') || (s[j] >= 'A' && s[j] <= 'Z'))
+			s[j] = arr[(int)s[j]];
 	}
 	return (s);
 }
