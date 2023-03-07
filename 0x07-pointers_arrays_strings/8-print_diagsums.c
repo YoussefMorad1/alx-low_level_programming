@@ -8,8 +8,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	long long sm1 = 0, sm2 = 0;
-	int i;
+	int sm1 = 0, sm2 = 0, i;
 
 	for (; i < size * size; i += size + 1)
 	{
@@ -20,5 +19,5 @@ void print_diagsums(int *a, int size)
 	{
 		sm2 += a[i];
 	}
-	printf("%lld, %lld\n", sm1, sm2);
+	printf("%d, %d\n", sm1, sm2);
 }
