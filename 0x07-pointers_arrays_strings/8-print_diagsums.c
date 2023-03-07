@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 /**
  * print_diagsums - hi
  * @a : hi
