@@ -9,7 +9,6 @@
 char *_strpbrk(char *s, char *a)
 {
 	int i = 0, j = 0;
-	bool found;
 
 	for (; s[i] != '\0'; i++)
 	{
