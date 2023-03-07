@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdbool.h>
 /**
  * _strspn - hi
  * @s : hi
