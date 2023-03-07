@@ -17,5 +17,5 @@ char *_strchr(char *s, char c)
 			break;
 		i++;
 	}
-	return ((void *)0);
+	return (0);
 }
