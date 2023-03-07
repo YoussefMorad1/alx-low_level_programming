@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdbool.h>
 /**
- * _strpbrk - hi
+ * _strstr - hi
  * @s : hi
  * @a : yo
  * Return: hi
@@ -18,7 +18,7 @@ char *_strstr(char *s, char *a)
 			if (s[i + j] != a[j])
 				found = 0;
 		}
-		if (found) 
+		if (found)
 			return (s + i);
 	}
 	return (0);
