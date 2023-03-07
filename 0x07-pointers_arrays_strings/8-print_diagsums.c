@@ -20,5 +20,5 @@ void print_diagsums(int *a, int size)
 	{
 		sm2 += a[i];
 	}
-	printf("%d, %d\n", sm1, sm2);
+	printf("%ld, %ld\n", sm1, sm2);
 }
