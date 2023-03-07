@@ -8,7 +8,7 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int sm1 = 0, sm2 = 0;
+	long long sm1 = 0, sm2 = 0;
 	int i;
 
 	for (; i < size * size; i += size + 1)
@@ -16,7 +16,7 @@ void print_diagsums(int *a, int size)
 		sm1 += a[i];
 	}
 
-	for (i = size - 1; i < size * size - 1; i += size - 1)
+	for (i = size - 1; i <= size * (size - 1); i += size - 1)
 	{
 		sm2 += a[i];
 	}
