@@ -7,14 +7,13 @@
 */
 int main(int argc, char **argv)
 {
-	char **s = argv;
-	int i = 0, j = argc;
+	int i, j;
 
-	while (*s)
+	if (argc != 3)
 	{
-		i++;
-		j++, s++;
+		printf("Error\n");
+		return (1);
 	}
-	printf("%d\n", argc - 1);
+	printf("%d\n", (**argv[1]) * (**argv[2]));
 	return (0);
 }
