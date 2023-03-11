@@ -12,6 +12,6 @@ int main(int argc, char **argv)
 
 	while (*s++ && i++)
 		;
-	printf("%d\n", i);
+	printf("%d\n", argc);
 	return (0);
 }
