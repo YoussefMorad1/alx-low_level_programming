@@ -8,10 +8,10 @@
 int main(int argc, char **argv)
 {
 	char **s = argv;
-	int i = 0;
-
+	int i = 0, j = argc;
+ 
 	while (*s++ && i++)
-		;
+		j++;
 	printf("%d\n", argc);
 	return (0);
 }
