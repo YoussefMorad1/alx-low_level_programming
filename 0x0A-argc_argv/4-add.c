@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 		for (j = 0; s[j] != '\0'; j++)
 		{
 			if (!isdigit(s[j]))
-					good = 0;
+				good = 0;
 		}
 		if (!good)
 		{
