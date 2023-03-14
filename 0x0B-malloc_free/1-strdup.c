@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- _strdup  - hi
+ * _strdup  - hi
  * @s : yo
  * Return: hi
 */
@@ -9,8 +9,8 @@ char *_strdup(char *s)
 {
 	char *ptr;
 	unsigned int i = 0, j = 0;
-	
-	if (!s || !s[j]) 
+
+	if (!s)
 		return (0);
 	while (s[j])
 		j++;
