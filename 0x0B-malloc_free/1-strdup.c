@@ -20,7 +20,8 @@ char *_strdup(char *s)
 		return (0);
 	while (i < j)
 	{
-		ptr[i] = s[i++];
+		ptr[i] = s[i];
+		i++;
 	}
 	return (ptr);
 }
