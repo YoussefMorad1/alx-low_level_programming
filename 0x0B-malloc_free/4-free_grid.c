@@ -9,7 +9,7 @@
 void free_grid(int **g, int h)
 {
 	int i = 0;
-	
+
 	while (i < h)
 	{
 		free(g[i]);
