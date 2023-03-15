@@ -6,7 +6,7 @@
  * @av : zz
  * Return: hi
 */
-char *argstostr(int ac, int **av)
+char *argstostr(int ac, char **av)
 {
 	int i = 0, j = 0, ln = 0;
 	char *s;
