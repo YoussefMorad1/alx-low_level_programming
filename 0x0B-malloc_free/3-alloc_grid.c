@@ -2,20 +2,26 @@
 #include <stdlib.h>
 /**
  * alloc_grid  - hi
- * @s1 : yo
- * @s2 : zz
+ * @w : yo
+ * @h : zz
  * Return: hi
 */
 int **alloc_grid(int w, int h)
 {
-	int i = 0, **s;
+	int i = 0, **s, j = 0;
 
-	if (w <= 0 || h <= 0) 
+	if (w <= 0 || h <= 0)
 		return (0);
-	s = malloc(w * sizeof(int *));
-	while (i < w)
+	s = malloc(h * sizeof(int *));
+	while (i < h)
 	{
-		s[i] = malloc(h * sizeof(int));
+		s[i] = malloc(w * sizeof(int));
+		j = 0;
+		while (j < w)
+		{
+			s[i][j] = 0;
+			j++;
+		}
 	}
 	return (s);
 }
