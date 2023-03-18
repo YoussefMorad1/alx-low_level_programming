@@ -13,12 +13,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int ln1 = 0;
 	int ln2 = n, i;
 	char *s3;
-	
-	if(s1)
+
+	if (s1)
 		ln1 = strlen(s1);
 	if (s2 && (int)strlen(s2) < ln2)
 		ln2 = strlen(s2);
-	if(!s2)
+	if (!s2)
 		ln2 = 0;
 	s3 = malloc(ln1 + ln2 + 1);
 	if (!s3)
@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (i < ln1)
 			s3[i] = s1[i];
-		if (i > ln1)
+		else
 			s3[i] = s2[i - ln1];
 	}
 	s3[ln1 + ln2] = '\0';
