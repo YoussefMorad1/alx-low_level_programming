@@ -11,15 +11,15 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	int ln1 = strlen(s1);
-	int ln2 = n;
+	int ln2 = n, i;
 	char *s3;
 
-	if (strlen(s2) < ln2)
+	if ((int)strlen(s2) < ln2)
 		ln2 = strlen(s2);
-	*s3 = malloc(ln1 + ln2 + 1);
+	s3 = malloc(ln1 + ln2 + 1);
 	if (!s3)
 		return (0);
-	for (int i = 0; i < ln1 + ln2; i++)
+	for (i = 0; i < ln1 + ln2; i++)
 	{
 		if (i < ln1)
 			s3[i] = s1[i];
