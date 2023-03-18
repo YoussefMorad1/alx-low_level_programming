@@ -22,6 +22,7 @@ void *_calloc(unsigned int n, unsigned int sz)
 	while (i < n * sz)
 	{
 		ptr2[i] = 0;
+		i++;
 	}
 	return (ptr);
 }
