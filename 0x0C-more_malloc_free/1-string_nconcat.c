@@ -10,12 +10,16 @@
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int ln1 = strlen(s1);
+	int ln1 = 0;
 	int ln2 = n, i;
 	char *s3;
-
-	if ((int)strlen(s2) < ln2)
+	
+	if(s1)
+		ln1 = strlen(s1);
+	if (s2 && (int)strlen(s2) < ln2)
 		ln2 = strlen(s2);
+	if(!s2)
+		ln2 = 0;
 	s3 = malloc(ln1 + ln2 + 1);
 	if (!s3)
 		return (0);
