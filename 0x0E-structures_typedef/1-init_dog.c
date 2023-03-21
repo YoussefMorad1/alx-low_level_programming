@@ -11,8 +11,8 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	d->name = malloc(strlen(name));
-	d->owner = malloc(strlen(owner));
+	d->name = malloc(1+strlen(name));
+	d->owner = malloc(1+strlen(owner));
 	strcpy(d->name, name);
 	d->age = age;
 	strcpy(d->owner, owner);
