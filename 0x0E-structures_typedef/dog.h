@@ -1,6 +1,6 @@
 #ifndef dogg
 #define dogg
-typedef struct dog dog_t
+typedef struct dog dog_t;
 /**
  * struct dog - hi
  * @age: aa
