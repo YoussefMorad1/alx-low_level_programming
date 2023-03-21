@@ -11,6 +11,8 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	if (!d)
+		return;
 	if (name)
 		d->name = malloc(1 + strlen(name));
 	if (owner)
