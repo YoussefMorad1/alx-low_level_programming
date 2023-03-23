@@ -21,7 +21,7 @@ void print_strings(const char *sep, const unsigned int n, ...)
 		{
 			char *c = va_arg(ls, char *);
 			if (c)
-				printf("%d%s", c, sep);
+				printf("%s%s", c, sep);
 			else
 				printf("(nil)%s", sep);
 		}
