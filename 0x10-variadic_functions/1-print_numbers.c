@@ -19,7 +19,7 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 	{
 		if (sep && i < (int)(n - 1))
 			printf("%d%s", va_arg(ls, int), sep);
-		else if (!sep)
+		else
 			printf("%d", va_arg(ls, int));
 	}
 	printf("\n");
