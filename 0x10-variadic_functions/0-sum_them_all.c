@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stdarg.h>
+#include "main.h"
 /**
  * sum_them_all - hi
  * @n : hi
