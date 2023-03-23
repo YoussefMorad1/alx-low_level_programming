@@ -16,7 +16,7 @@ void print_all(const char * const s, ...)
 	int ln = strlen(s), i = 0;
 
 	va_start(ls, s);
-	for (; i < ln; ++i)
+	while (i < ln)
 	{
 		char c = p[i];
 		char *sep = ", ";
@@ -36,6 +36,7 @@ void print_all(const char * const s, ...)
 			else
 				printf("(nil)%s", sep);
 		}
+		i++;
 	}
 	va_end(ls);
 	printf("\n");
