@@ -18,11 +18,11 @@ void print_all(const char * const s, ...)
 	va_start(ls, s);
 	while (i < ln - 1)
 	{
-		i++;
 		char c = p[i];
 		char *sep = ", ";
 		char *t;
 
+		i++;
 		if (i == ln - 1)
 			sep = "";
 		if (c != 'i' && c != 'c' && c != 'f' && c != 's') 
@@ -33,7 +33,7 @@ void print_all(const char * const s, ...)
 			printf("%c%s", va_arg(ls, int), sep);
 		else if (c == 'f')
 			printf("%f%s", va_arg(ls, double), sep);
-		else if (t = va_arg(ls, char *))
+		else if ((t = va_arg(ls, char *)))
 			printf("%s%s", t, sep);
 		else
 			printf("%s%s", "(nil)", sep);
