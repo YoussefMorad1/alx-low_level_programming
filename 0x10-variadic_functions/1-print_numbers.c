@@ -14,8 +14,6 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 	va_list ls;
 	int i = 0;
 
-	if (!n) 
-		return;
 	va_start(ls, n);
 	for (i = 0; i < (int) n; i++)
 	{
