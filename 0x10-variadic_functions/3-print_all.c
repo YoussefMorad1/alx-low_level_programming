@@ -31,6 +31,7 @@ void print_all(const char * const s, ...)
 			printf("%f%s", va_arg(ls, double), sep);
 		else if (c == 's'){
 			char *ss = va_arg(ls, char *);
+
 			if (ss)
 				printf("%s%s", ss, sep);
 			else
