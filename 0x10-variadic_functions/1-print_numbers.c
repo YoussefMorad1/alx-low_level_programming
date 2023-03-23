@@ -14,7 +14,7 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 
 	for (i = 0; i < (int) n; i++)
 	{
-		if (sep && i < in(n - 1))
+		if (sep && i < int(n - 1))
 			printf("%d%s ", va_arg(ls, int), sep);
 		else if (!sep)
 			printf("%d ", va_arg(ls, int));
