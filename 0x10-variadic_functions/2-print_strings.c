@@ -20,18 +20,20 @@ void print_strings(const char *sep, const unsigned int n, ...)
 		if (sep && i < (int)(n - 1))
 		{
 			char *c = va_arg(ls, char *);
+
 			if (c)
 				printf("%s%s", c, sep);
 			else
 				printf("(nil)%s", sep);
 		}
-		else{
+		else
+		{
 			char *c = va_arg(ls, char *);
+
 			if (c)
 				printf("%s", c);
 			else
 				printf("(nil)");
-			
 		}
 	}
 	va_end(ls);
