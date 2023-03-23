@@ -29,8 +29,13 @@ void print_all(const char * const s, ...)
 			printf("%c%s", va_arg(ls, int), sep);
 		else if (c == 'f')
 			printf("%f%s", va_arg(ls, double), sep);
-		else if (c == 's')
-			printf("%s%s", va_arg(ls, char *), sep);
+		else if (c == 's'){
+			char *ss = va_arg(ls, char *);
+			if (ss)
+				printf("%s%s", ss, sep);
+			else
+				printf("(nil)%s", sep);
+		}
 	}
 	va_end(ls);
 	printf("\n");
