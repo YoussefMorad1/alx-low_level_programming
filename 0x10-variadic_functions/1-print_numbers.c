@@ -12,9 +12,11 @@ void print_numbers(const char *sep, const unsigned int n, ...)
 	va_list ls = va_start(n);
 	int i = 0;
 
+	if (!n) 
+		return;
 	for (i = 0; i < (int) n; i++)
 	{
-		if (sep && i < int(n - 1))
+		if (sep && i < (int)(n - 1))
 			printf("%d%s ", va_arg(ls, int), sep);
 		else if (!sep)
 			printf("%d ", va_arg(ls, int));
