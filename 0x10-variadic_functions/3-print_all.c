@@ -12,16 +12,15 @@
 void print_all(const char * const s, ...)
 {
 	va_list ls;
-	int ln = strlen(s), i = -1;
+	int ln = strlen(s), i = 0;
 
 	va_start(ls, s);
-	while (i < ln - 1)
+	while (i < ln)
 	{
 		char c = s[i];
 		char *sep = ", ";
 		char *t = "(nil)";
 
-		i++;
 		if (i == ln - 1)
 			sep = "";
 		switch (c)
@@ -44,6 +43,7 @@ void print_all(const char * const s, ...)
 			default:
 				break;
 		}
+		i++;
 	}
 	va_end(ls);
 	printf("\n");
