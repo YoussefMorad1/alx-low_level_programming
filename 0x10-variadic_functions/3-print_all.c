@@ -13,11 +13,10 @@ void print_all(const char * const s, ...)
 {
 	va_list ls;
 	int i = 0;
-       	int ln = strlen(s);
 	char c = 0, *t = 0, *sep = "";
 
 	va_start(ls, s);
-	while (s && i < ln)
+	while (s && i < (int)strlen(s))
 	{
 		c = s[i];
 		switch (c)
