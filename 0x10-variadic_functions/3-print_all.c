@@ -73,5 +73,10 @@ void print_all(const char * const s, ...)
 		i++;
 	}
 	va_end(ls);
-	printf("\n");
+	switch (s){
+		case 0:
+			break;
+		default:
+			printf("\n");
+	}
 }
