@@ -4,18 +4,15 @@
 #include <stdlib.h>
 #include "variadic_functions.h"
 /**
- * print_all - hi
+ * m - hi
  * @s : hi
- * @... : yo
+ * @ls : bye
  * Return: hi
-*/
-void print_all(const char * const s, ...)
+ */
+void m(const char * const s, va_list ls)i
 {
-	va_list ls;
-	int ln = strlen(s), i = 0;
-	char c, *t;
+	int i = 0;
 
-	va_start(ls, s);
 	while (s && i < ln)
 	{
 		c = s[i];
@@ -44,11 +41,25 @@ void print_all(const char * const s, ...)
 		i++;
 		break;
 	}
+}
+/**
+ * print_all - hi
+ * @s : hi
+ * @... : yo
+ * Return: hi
+*/
+void print_all(const char * const s, ...)
+{
+	va_list ls;
+	int ln = strlen(s), i = 0;
+	char c, *t;
+
+	va_start(ls, s);
+	m();
 	while (s && i < ln)
 	{
 		char *sep = ", ";
 
-		t = "(nil)";
 		c = s[i];
 		switch (c)
 		{
@@ -73,10 +84,5 @@ void print_all(const char * const s, ...)
 		i++;
 	}
 	va_end(ls);
-	switch (s){
-		case 0:
-			break;
-		default:
-			printf("\n");
-	}
+	printf("\n");
 }
