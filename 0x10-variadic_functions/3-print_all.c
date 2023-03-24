@@ -15,6 +15,8 @@ void print_all(const char * const s, ...)
 	int ln = strlen(s), i = 0;
 	char c = 0, *t = 0, *sep = "";
 
+	if (!s)
+		return;
 	va_start(ls, s);
 	while (s && i < ln)
 	{
