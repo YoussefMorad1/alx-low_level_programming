@@ -13,32 +13,59 @@ void print_all(const char * const s, ...)
 {
 	va_list ls;
 	int ln = strlen(s), i = 0;
+	char c, *t;
 
 	va_start(ls, s);
 	while (i < ln)
 	{
-		char c = s[i];
-		char *sep = ", ";
-		char *t = "(nil)";
-
-		if (i == ln - 1)
-			sep = "";
+		c = s[i];
+		
 		switch (c)
 		{
 			case 'i':
-				printf("%d%s", va_arg(ls, int), sep);
+				printf("%d", va_arg(ls, int));
 				break;
 			case 'c':
-				printf("%c%s", va_arg(ls, int), sep);
+				printf("%c", va_arg(ls, int));
 				break;
 			case 'f':
-				printf("%f%s", va_arg(ls, double), sep);
+				printf("%f", va_arg(ls, double));
 				break;
 			case 's':
 				t = va_arg(ls, char *);
 				if (!t)
 					t = "(nil)";
-				printf("%s%s", t, sep);
+				printf("%s", t);
+				break;
+			default:
+				i++;
+				continue;
+		}
+		i++;
+		break;
+	}
+	while (i < ln)
+	{
+		char *sep = ", ";
+
+		t = "(nil)";
+		c = s[i];
+		switch (c)
+		{
+			case 'i':
+				printf("%s%d", sep, va_arg(ls, int));
+				break;
+			case 'c':
+				printf("%s%c", sep, va_arg(ls, int));
+				break;
+			case 'f':
+				printf("%s%f", sep, va_arg(ls, double));
+				break;
+			case 's':
+				t = va_arg(ls, char *);
+				if (!t)
+					t = "(nil)";
+				printf("%s%s", sep, t);
 				break;
 			default:
 				break;
