@@ -16,10 +16,10 @@ void print_all(const char * const s, ...)
 	char c, *t;
 
 	va_start(ls, s);
-	while (i < ln)
+	while (s && i < ln)
 	{
 		c = s[i];
-		
+
 		switch (c)
 		{
 			case 'i':
@@ -44,7 +44,7 @@ void print_all(const char * const s, ...)
 		i++;
 		break;
 	}
-	while (i < ln)
+	while (s && i < ln)
 	{
 		char *sep = ", ";
 
