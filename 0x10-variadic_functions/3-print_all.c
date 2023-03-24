@@ -16,7 +16,7 @@ void print_all(const char * const s, ...)
 	char c = 0, *t = 0, *sep = "";
 
 	va_start(ls, s);
-	while (s && i < strlen(s))
+	while (s && i < (int)strlen(s))
 	{
 		c = s[i];
 		switch (c)
