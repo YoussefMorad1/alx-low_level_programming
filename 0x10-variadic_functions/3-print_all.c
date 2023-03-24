@@ -55,7 +55,7 @@ void print_all(const char * const s, ...)
 	char c, *t;
 
 	va_start(ls, s);
-	m();
+	m(s, ls);
 	while (s && i < ln)
 	{
 		char *sep = ", ";
