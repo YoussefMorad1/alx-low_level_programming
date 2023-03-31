@@ -12,9 +12,13 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	char *s = strdup(str);
 	list_t *h = malloc(sizeof *h), *tmp = *head;
-
+	
 	if (!h || (!s && str))
 	{
+		if (h)
+			free(h);
+		if (s)
+			free(s);
 		return (0);
 	}
 	h->str = s;
