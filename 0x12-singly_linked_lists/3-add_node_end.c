@@ -30,7 +30,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	if (ptr)
 		ptr->next = h;
-	else{
+	else
+	{
 		ptr = h;
 		*head = h;
 	}
