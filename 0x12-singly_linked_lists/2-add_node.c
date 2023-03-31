@@ -10,13 +10,12 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	char *s = 0;
+	char *s;
 	list_t *h = malloc(sizeof(*h));
 
 	if (!h)
 		return (0);
-	if (str)
-		s = strdup(str);
+	s = strdup(str);
 	if (!s && str)
 	{
 		free(h);
