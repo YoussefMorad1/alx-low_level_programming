@@ -3,15 +3,15 @@
 #include <string.h>
 #include "lists.h"
 /**
- * add_node - hi
+ * add_node_end - hi
  * @head : hi
  * @str : hi
  * Return: hi
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	char *s = strdup(str);
-	list_t *h = new list_t;
+	list_t *h = new list_t, *tmp = *head;
 
 	if (!h || (!s && str))
 	{
@@ -20,14 +20,10 @@ list_t *add_node(list_t **head, const char *str)
 	h->str = s;
 	h->next = NULL;
 	h->len = strlen(s);
-	if (*head)
+	while ((*head)->next)
 	{
-		h->next = head;
-		*head = h;
+		*head = (*head)->next;
 	}
-	else
-	{
-		*head = h;
-	}
-	return (head);
+	(*head)->next = h;
+	return (tmp);
 }
