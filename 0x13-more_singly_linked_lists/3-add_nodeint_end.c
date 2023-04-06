@@ -5,25 +5,19 @@
 /**
  * add_node_end - hi
  * @head : hi
- * @str : hi
+ * @n : hi
  * Return: hi
  */
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_node_end(listint_t **head, const int n)
 {
-	char *s = strdup(str);
-	list_t *h = malloc(sizeof(*h)), *ptr = *head;
+	listint_t *h = malloc(sizeof(*h)), *ptr = *head;
 
-	if (!h || (!s && str))
+	if (!h)
 	{
-		if (h)
-			free(h);
-		if (s)
-			free(s);
 		return (0);
 	}
-	h->str = s;
 	h->next = NULL;
-	h->len = strlen(s);
+	h->n = n;
 	while (ptr && ptr->next)
 	{
 		ptr = ptr->next;
