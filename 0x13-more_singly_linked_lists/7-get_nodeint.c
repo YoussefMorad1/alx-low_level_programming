@@ -8,7 +8,8 @@
  * @index : hi
  * Return: hi
  */
-listint_t *get_nodeint_at_index(listint_t *h, unsigned int index){
+listint_t *get_nodeint_at_index(listint_t *h, unsigned int index)
+{
 	unsigned int i = 0;
 
 	while (h && i < index)
@@ -16,5 +17,5 @@ listint_t *get_nodeint_at_index(listint_t *h, unsigned int index){
 		h =  h->next;
 		i++;
 	}
-	return h;
+	return (h);
 }
