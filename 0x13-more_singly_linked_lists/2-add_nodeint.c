@@ -8,9 +8,9 @@
  * @n : hi
  * Return: hi
  */
-list_t *add_nodeint(list_t **head, const int n)
+list_t *add_nodeint(listint_t **head, const int n)
 {
-	list_t *h = malloc(sizeof(*h));
+	listint_t *h = malloc(sizeof(*h));
 
 	if (!h)
 		return (0);
