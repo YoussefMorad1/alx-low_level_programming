@@ -3,12 +3,12 @@
 #include <string.h>
 #include "lists.h"
 /**
- * add_node_end - hi
+ * add_nodeint_end - hi
  * @head : hi
  * @n : hi
  * Return: hi
  */
-listint_t *add_node_end(listint_t **head, const int n)
+listint_t *add_nodent_end(listint_t **head, const int n)
 {
 	listint_t *h = malloc(sizeof(*h)), *ptr = *head;
 
