@@ -9,10 +9,11 @@
  */
 void free_listint2(listint_t **he)
 {
-	listint_t *h = *he;
+	listint_t *h;
 
 	if (!he)
 		return;
+	h = *he;
 	while (h)
 	{
 		listint_t *n = h->next;
