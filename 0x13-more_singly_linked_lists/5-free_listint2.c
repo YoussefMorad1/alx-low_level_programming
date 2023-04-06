@@ -4,18 +4,19 @@
 #include "lists.h"
 /**
  * free_list - hi
- * @h : hi
+ * @he : hi
  * Return: hi
  */
-void free_list(list_t *h)
+void free_listint(listint_t **he)
 {
+	listint_t h = *he;
+
 	while (h)
 	{
-		list_t *n = h->next;
+		listint_t *n = h->next;
 
-		if (h->str)
-			free(h->str);
 		free(h);
 		h = n;
 	}
+	(*he) = 0;
 }
