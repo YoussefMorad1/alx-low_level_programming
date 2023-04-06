@@ -3,7 +3,7 @@
 #include <string.h>
 #include "lists.h"
 /**
- * free_list - hi
+ * free_listint - hi
  * @h : hi
  * Return: hi
  */

@@ -3,13 +3,13 @@
 #include <string.h>
 #include "lists.h"
 /**
- * free_list - hi
+ * free_listint2 - hi
  * @he : hi
  * Return: hi
  */
-void free_listint(listint_t **he)
+void free_listint2(listint_t **he)
 {
-	listint_t h = *he;
+	listint_t *h = *he;
 
 	while (h)
 	{
