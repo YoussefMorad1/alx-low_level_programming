@@ -1,10 +1,10 @@
 #ifndef hi
 #define hi
-/** 
+/**
  * struct listint_s - singly linked list
  * @n: string - (malloc'ed string)
  * @next: points to the next node
- *  
+ *
  * Description: singly linked list node structure
  */
 typedef struct listint_s
