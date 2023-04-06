@@ -3,11 +3,11 @@
 #include <string.h>
 #include "lists.h"
 /**
- * print_list - hi
+ * print_listint - hi
  * @h : hi
  * Return: hi
  */
-size_t print_list(const list_t *h)
+size_t print_listint(const list_t *h)
 {
 	size_t x = 0;
 
