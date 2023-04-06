@@ -8,7 +8,7 @@
  * @n : hi
  * Return: hi
  */
-listint_t *add_nodent_end(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *h = malloc(sizeof(*h)), *ptr = *head;
 
