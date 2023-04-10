@@ -8,10 +8,10 @@
  * @m : hi
  * Return: hi
  */
-int flip_bits(unsigned long int n, unsigned long int m)
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int i = -1;
-	int ct = 0;
+	unsigned int ct = 0;
 
 	while (++i < 32ul)
 	{
