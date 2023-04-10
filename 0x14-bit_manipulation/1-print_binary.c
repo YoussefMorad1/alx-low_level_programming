@@ -10,7 +10,9 @@
  */
 void hbd(unsigned long int n, unsigned long int i)
 {
-	if ((1ul << i) > n || (i && (1ul << (i-1)) >= (1ul << i)))
+	if ((1ul << i) > n)
+		return ;
+	if (i && (1ul << (i-1)) >= (1ul << i))
 		return;
 	hbd(n, i + 1);
 	_putchar('0' + ((n & (1ul << i)) ? 1ul : 0ul));
