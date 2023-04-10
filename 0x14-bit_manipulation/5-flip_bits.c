@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int i = 0;
 	unsigned int ct = 0;
 
-	while (i < 31ul)
+	while (i < sizeof(n) * 8ul)
 	{
 		if ((n & (1ul << i)) != (m & (1ul << i)))
 			ct++;
