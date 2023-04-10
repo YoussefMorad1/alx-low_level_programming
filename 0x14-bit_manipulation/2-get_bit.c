@@ -11,7 +11,7 @@
 int get_bit(unsigned long int n, unsigned int idx)
 {
 	if (idx <= 31)
-		return (n & (1ul << idx)) ? 1 : 0;
+		return ((n & (1ul << idx)) ? 1 : 0);
 	else
 		return (-1);
 }
