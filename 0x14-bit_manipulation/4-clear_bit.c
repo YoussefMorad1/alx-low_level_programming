@@ -11,7 +11,7 @@
 int clear_bit(unsigned long int *n, unsigned int idx)
 {
 	if (idx <= 31)
-		(*n) = (*n) & (1ul << idx);
+		(*n) = (*n) & (~(1ul << idx));
 	else
 		return (-1);
 	return (1);
