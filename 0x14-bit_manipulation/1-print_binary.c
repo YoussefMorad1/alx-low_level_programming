@@ -8,12 +8,12 @@
  * @i : hi
  * Return: hi
  */
-void hbd(unsigned long int n, int i)
+void hbd(unsigned long int n, unsigned long int i)
 {
-	if ((1 << i) > (int)n) 
+	if ((1 << i) > n) 
 		return;
 	hbd(n, i + 1);
-	printf("%d", (n & (1 << i)) ? 1 : 0);
+	_putchar('0' + ((n & (1 << i)) ? 1 : 0));
 }
 /**
  * binary_to_uint - hi
