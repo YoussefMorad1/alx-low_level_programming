@@ -10,10 +10,10 @@
  */
 void hbd(unsigned long int n, unsigned long int i)
 {
-	if (((unsigned long int)(1) << i) > n)
+	if ((1ul << i) > n || (i && (1ul << (i-1)) > (1ul << i))
 		return;
 	hbd(n, i + 1);
-	_putchar('0' + ((n & ((unsigned long int)(1) << i)) ? 1ul : 0ul));
+	_putchar('0' + ((n & (1ul << i)) ? 1ul : 0ul));
 }
 /**
  * print_binary - hi
