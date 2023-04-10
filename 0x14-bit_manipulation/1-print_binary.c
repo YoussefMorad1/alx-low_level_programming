@@ -12,7 +12,7 @@ void hbd(unsigned long int n, unsigned long int i)
 {
 	if ((1ul << i) > n)
 		return;
-	if (i && ((1ul << i) == 1ul))
+	if (i && ((1ul << i) == 0ul))
 		return;
 	hbd(n, i + 1);
 	_putchar('0' + ((n & (1ul << i)) ? 1ul : 0ul));
