@@ -1,5 +1,20 @@
 #include "main.h"
-/** 
+#include "main.h"
+/**
+ * _strlen - hi
+ * Description - ss
+ * @s : p
+ * Return: hi
+ **/
+int _strlen(char *s)
+{
+	int i = 0;
+
+	for (; s[i] != '\0'; i++)
+		;
+	return (i);
+}
+/**
  * create_file - hi
  * @filename: hi
  * @text_content: hi
