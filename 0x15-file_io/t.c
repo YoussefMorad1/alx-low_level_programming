@@ -2,5 +2,5 @@
 #include <stdio.h>
 int main()
 {
-	create_file("hello", "hi my");
+	create_file("hello", "hi my asdfasdf");
 }
