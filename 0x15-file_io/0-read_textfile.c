@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <fcntl.h>
-#include "head.h"
+#include "header.h"
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, rd;
+	int fd, rd, wr;
 	char buf[letters + 1];
 
 	if (!filename)
