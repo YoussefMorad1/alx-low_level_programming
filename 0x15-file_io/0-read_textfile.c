@@ -3,10 +3,16 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include "main.h"
+/**
+ * read_textfile - hi
+ * @filename: file name
+ * @letters: no of letters
+ * Return: you know
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd, rd, wr;
-	char* buf = malloc(letters + 1);
+	char *buf = malloc(letters + 1);
 
 	if (!filename)
 		return (0);
