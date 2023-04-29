@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 	while (1)
 	{
 		rd = read(fdf, buf, 1024);
-		if (rd < 0) break;
+		if (rd <= 0) break;
 		buf[rd] = 0;
 		if (dprintf(fdt, "%s", buf) < 0)
 		{
