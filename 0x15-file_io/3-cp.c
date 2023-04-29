@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 		dprintf(2, "Error: Can't read from file %s\n", from);	
 		exit(98);
 	}
-	fdt = open(to, O_TRUNC | O_RDWR | O_CREAT, 0661);
+	fdt = open(to, O_TRUNC | O_RDWR | O_CREAT, 0664);
 	if (fdt < 0)
 	{
 		dprintf(2, "Error: Can't write to %s\n", to);
