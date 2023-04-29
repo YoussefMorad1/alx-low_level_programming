@@ -23,27 +23,23 @@ int _strlen(char *s)
 int main(int argc, char **argv)
 {
 	int fdf, fdt, rd;
-	char arr[1050];
-	char *from, *to, *buf = arr;
+	char *from, *to, arr[1050], *buf = arr;
 
 	if (argc != 3)
-	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+	if (argc != 3)
 		exit(97);
-	}
 	from = argv[1], to = argv[2];
 	fdf = open(from, O_RDONLY);
 	if (fdf < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);	
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
+	if (fdf < 0)
 		exit(98);
-	}
 	fdt = open(to, O_TRUNC | O_WRONLY | O_CREAT, 0664);
 	if (fdt < 0)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
+	if (fdt < 0)
 		exit(99);
-	}
 	while (1)
 	{
 		rd = read(fdf, buf, 1024);
@@ -52,8 +48,8 @@ int main(int argc, char **argv)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
 			exit(98);
 		}
-		if (rd == 0) break;
-		buf[rd] = 0;
+		if (rd == 0)
+			break;
 		if (write(fdt, buf, rd) < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
