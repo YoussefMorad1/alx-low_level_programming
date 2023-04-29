@@ -23,7 +23,8 @@ int _strlen(char *s)
 int main(int argc, char **argv)
 {
 	int fdf, fdt, wr;
-	char *er, *from, *to, buf[1050];
+	char arr[1050];
+	char *er, *from, *to, *buf = arr;
 
 	if (argc != 3)
 	{
@@ -45,7 +46,7 @@ int main(int argc, char **argv)
 	}
 	while (read(fdf, buf, 1024) > 0)
 	{
-		if (dprintf(fdt, buf) < 0)
+		if (dprintf(fdt, "%s", buf) < 0)
 		{
 			dprintf(2, "Error: Can't write to %s\n", to);
 			exit(99);
