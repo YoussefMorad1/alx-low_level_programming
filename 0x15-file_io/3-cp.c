@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 		}
 		if (rd == 0) break;
 		buf[rd] = 0;
-		if (write(fdt, buf, _strlen(buf)) < 0)
+		if (write(fdt, buf, rd) < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 			exit(99);
