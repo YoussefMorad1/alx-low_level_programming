@@ -22,9 +22,9 @@ int _strlen(char *s)
  */
 int main(int argc, char **argv)
 {
-	int fdf, fdt, wr;
+	int fdf, fdt;
 	char arr[1050];
-	char *er, *from, *to, *buf = arr;
+	char *from, *to, *buf = arr;
 
 	if (argc != 3)
 	{
