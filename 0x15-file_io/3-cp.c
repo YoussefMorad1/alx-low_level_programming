@@ -47,9 +47,14 @@ int main(int argc, char **argv)
 	while (1)
 	{
 		rd = read(fdf, buf, 1024);
-		if (rd <= 0) break;
+		if (rd < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", from);
+			exit(98);
+		}
+		if (rd == 0) break;
 		buf[rd] = 0;
-		if (dprintf(fdt, "%s", buf) < 0)
+		if (write(fdt, buf, _strlen(buf)) < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", to);
 			exit(99);
