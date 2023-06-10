@@ -5,7 +5,7 @@
  * @ht: hi
  * Return: hi
  */
-void hash_table_delete(const hash_table_t *ht)
+void hash_table_delete(hash_table_t *ht)
 {
 	int i;
 	hash_node_t *ptr, *nxt;
