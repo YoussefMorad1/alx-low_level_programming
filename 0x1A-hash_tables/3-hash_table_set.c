@@ -23,10 +23,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			tmp = malloc(strlen(value) + 1);
 			if (!tmp)
-			{
 				free(newNode);
+			if (!tmp)
 				return (0);
-			}
 			free(ptr->value);
 			ptr->value = tmp;
 			strcpy(ptr->value, value);
