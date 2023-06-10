@@ -22,8 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(ptr->key, key) == 0)
 		{
 			tmp = malloc(strlen(value) + 1);
-			if (!tmp)
-				free(newNode);
+			free(newNode);
 			if (!tmp)
 				return (0);
 			free(ptr->value);
