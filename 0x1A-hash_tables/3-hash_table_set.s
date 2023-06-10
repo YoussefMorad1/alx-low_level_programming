@@ -38,8 +38,6 @@ hash_table_set:
 	cmpq	$0, -16(%rbp)
 	je	.L2
 	cmpq	$0, -56(%rbp)
-	je	.L2
-	cmpq	$0, -72(%rbp)
 	jne	.L5
 .L2:
 	movl	$0, %eax
@@ -56,11 +54,15 @@ hash_table_set:
 	movq	-72(%rbp), %rax
 	movq	%rax, %rdi
 	call	strlen@PLT
+	addq	$1, %rax
 	movq	%rax, %rdi
 	call	malloc@PLT
 	movq	%rax, -8(%rbp)
 	cmpq	$0, -8(%rbp)
 	jne	.L7
+	movq	-16(%rbp), %rax
+	movq	%rax, %rdi
+	call	free@PLT
 	movl	$0, %eax
 	jmp	.L4
 .L7:
@@ -141,7 +143,8 @@ hash_table_set:
 	movq	%rax, %rdi
 	call	strcpy@PLT
 	movq	-16(%rbp), %rax
-	movq	$0, 16(%rax)
+	movq	-24(%rbp), %rdx
+	movq	%rdx, 16(%rax)
 	movq	-56(%rbp), %rax
 	movq	8(%rax), %rdx
 	movl	-36(%rbp), %eax
@@ -150,18 +153,6 @@ hash_table_set:
 	addq	%rax, %rdx
 	movq	-16(%rbp), %rax
 	movq	%rax, (%rdx)
-	cmpq	$0, -24(%rbp)
-	je	.L11
-	movq	-56(%rbp), %rax
-	movq	8(%rax), %rdx
-	movl	-36(%rbp), %eax
-	cltq
-	salq	$3, %rax
-	addq	%rdx, %rax
-	movq	(%rax), %rax
-	movq	-24(%rbp), %rdx
-	movq	%rdx, 16(%rax)
-.L11:
 	movl	$1, %eax
 .L4:
 	leave

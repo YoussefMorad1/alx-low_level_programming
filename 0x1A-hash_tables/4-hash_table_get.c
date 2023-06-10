@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <string.h>
 /**
  * hash_table_get - hi
  * @ht: hi
@@ -7,7 +8,7 @@
  */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	int idx = key_index(key, ht->size);
+	int idx = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *node = ht->array[idx];
 
 	while(node)
@@ -17,5 +18,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 			return (node->value);
 		}
 	}
-	return NULL;
+	return (NULL);
 }
