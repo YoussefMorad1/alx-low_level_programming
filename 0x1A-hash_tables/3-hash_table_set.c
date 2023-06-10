@@ -1,6 +1,5 @@
 #include "hash_tables.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 /**
  * hash_table_set - hi
@@ -18,7 +17,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (!newNode || !ht)
 		return (0);
-	printf("idx:%d\n", idx);
 	while (ptr)
 	{
 		if (strcmp(ptr->key, key) == 0)
@@ -36,7 +34,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		ptr = ptr->next;
 	}
-	printf("out here\n");
 	newNode->key = malloc(strlen(key) + 1);
 	if (!newNode->key)
 	{
