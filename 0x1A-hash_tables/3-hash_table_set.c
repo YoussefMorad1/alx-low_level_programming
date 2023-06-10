@@ -12,7 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int idx = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *firstNode = ht->array[idx], *ptr = firstNode;
-	hash_node_t *newNode = malloc(sizeof(newNode));
+	hash_node_t *newNode = malloc(sizeof(*newNode));
 	char *tmp;
 
 	if (!newNode || !ht)
