@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <stdio.h>
 /**
  * hash_table_print - hi
  * @ht: hi
@@ -10,9 +11,9 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *ptr;
 
 	printf("{");
-	for (i = 0; i < ht->size; i++)
+	for (i = 0; i < (int)ht->size; i++)
 	{
-		ptr = ht->arry[i];
+		ptr = ht->array[i];
 
 		while (ptr)
 		{
