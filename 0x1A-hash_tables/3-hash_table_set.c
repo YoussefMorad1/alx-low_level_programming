@@ -10,13 +10,13 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int idx = key_index((const unsigned char *)key, ht->size);
-	hash_node_t *firstNode = ht->array[idx], *ptr = ht->array[idx];
-	hash_node_t *newNode = malloc(sizeof(hash_node_t));
+	int idx = ht ? key_index((const unsigned char *)key, ht->size) : 0;
+	hash_node_t *firstNode = ht ? ht->array[idx] : 0, *ptr = firstNode, *newNode;
 	char *tmp;
 
-	if (!newNode || !ht)
+	if (!ht)
 		return (0);
+	newNode = malloc(sizeof(hash_node_t));
 	while (ptr)
 	{
 		if (strcmp(ptr->key, key) == 0)
