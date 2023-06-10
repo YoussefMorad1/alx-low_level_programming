@@ -9,7 +9,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int idx = key_index(key, ht->size);
+	int idx = key_index((const unsigned char *)key, ht->size);
 	hash_node_t *firstNode = ht->array[idx];
 	hash_node_t *newNode = malloc(sizeof(newNode));
 
