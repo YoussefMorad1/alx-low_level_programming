@@ -13,8 +13,9 @@ int main(void)
 	hash_table_t *ht;
 	char *value;
 
+	(void)value;
 	ht = hash_table_create(1024);
-	hash_table_set(ht, "dram ", "youssef");
+	hash_table_set(ht, "dram", "youssef");
 	hash_table_set(ht, "vivency", "karim");
 /*	hash_table_set(ht, "python", "awesome");
 	hash_table_set(ht, "Bob", "and Kris love asm");
@@ -41,7 +42,8 @@ int main(void)
 */
 	value = hash_table_get(ht, "dram");
 	printf("%s:%s\n", "dram", value);
-	value = hash_table_get(ht, "vivency");
+/*	value = hash_table_get(ht, "vivency");
 	printf("%s:%s\n", "vivency", value);
+	*/
 	return (EXIT_SUCCESS);
 }

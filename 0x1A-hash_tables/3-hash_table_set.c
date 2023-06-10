@@ -1,5 +1,6 @@
 #include "hash_tables.h"
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 /**
  * hash_table_set - hi
@@ -11,12 +12,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int idx = key_index((const unsigned char *)key, ht->size);
-	hash_node_t *firstNode = ht->array[idx], *ptr = firstNode;
-	hash_node_t *newNode = malloc(sizeof(*newNode));
+	hash_node_t *firstNode = ht->array[idx], *ptr = ht->array[idx];
+	hash_node_t *newNode = malloc(sizeof(hash_node_t));
 	char *tmp;
 
 	if (!newNode || !ht)
 		return (0);
+	printf("idx:%d\n", idx);
 	while (ptr)
 	{
 		if (strcmp(ptr->key, key) == 0)
@@ -27,12 +29,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				free(newNode);
 				return (0);
 			}
-			free(ptr->value), ptr->value = tmp;
+			free(ptr->value);
+			ptr->value = tmp;
 			strcpy(ptr->value, value);
 			return (1);
 		}
 		ptr = ptr->next;
 	}
+	printf("out here\n");
 	newNode->key = malloc(strlen(key) + 1);
 	if (!newNode->key)
 	{
