@@ -14,10 +14,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *firstNode = ht->array[idx];
 	hash_node_t *newNode = malloc(sizeof(newNode));
 
-	if (!newNode)
+	if (!newNode || !ht || !value)
 		return (0);
 	newNode->key = malloc(strlen(key) + 1);
-	if (newNode->key == 0)
+	if (!newNode->key)
 	{
 		free(newNode);
 		return (0);
