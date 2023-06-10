@@ -20,6 +20,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	newNode->next = 0;
 	ht->array[idx] = newNode;
 	if (firstNode)
-		newNode->next = firstNode;
+		ht->array[idx]->next = firstNode;
 	return (1);
 }
